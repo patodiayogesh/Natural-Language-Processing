@@ -106,39 +106,6 @@ def get_pronouns(data_train):
     return pro_pos, con_pos
 
 
-def get_religion(row_data):
-    # print(row_data)
-    # print(row_data['voters'],row_data['pro_debater'],row_data['con_debater'])
-    user_data = pd.read_json('data/users.json').T
-
-    voters = row_data['voters']
-    voter_df = pd.Series(voters, name='user_name').T
-    df2 = pd.merge(voter_df, user_data, on=['user_name', 'user_name'])[['opinion_arguments', 'religious_ideology']]
-    # print(df2)
-    pro_details = user_data.loc[user_data['user_name'] == row_data['pro_debater']]
-    pro_details = pro_details[['opinion_arguments', 'religious_ideology']]
-
-    con_details = user_data.loc[user_data['user_name'] == row_data['con_debater']]
-    con_details = con_details[['opinion_arguments', 'religious_ideology']]
-
-    # print('PRO',pro_details)
-    # print('CON',con_details)
-    # print('PRO',pro_details),con_details,df2)
-
-    pro_religion = pro_details['religious_ideology']
-    # print(pro_religion)
-    pro_religion = df2['religious_ideology'].str.count(pro_religion[0])
-    pro_religion = pro_religion.sum()
-
-    con_religion = con_details['religious_ideology']
-    con_religion = df2['religious_ideology'].str.count(con_religion[0])
-    con_religion = con_religion.sum()
-    # print(pro_religion, con_religion)
-    a = pd.Series([pro_religion, con_religion])
-
-    return a
-
-
 # Function to get Debater Religion Data From User Table
 def get_ethnicity_data(encoder, data, user_data):
     # Merge the dataframes to get the data pertaining to each debater from user table
