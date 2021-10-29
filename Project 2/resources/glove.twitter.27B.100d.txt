@@ -1,0 +1,1 @@
+Please download pertained Glove Twitter embeddings and put in this file.
