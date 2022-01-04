@@ -1,4 +1,4 @@
-# Natural_Language_Processing
+# Natural Language Processing
 
 # Project 1:
   Use of Ngrams, Lexicons, Liguistic features and User data
