@@ -20,3 +20,7 @@
   
   Explore each BERT hidden layer representations for 
   NER, POS and REL task
+
+# Project 4:
+  Use of Image Data along with their Captions to generate
+  image caption using Greedy, Beam and Nucleus Decoder.
