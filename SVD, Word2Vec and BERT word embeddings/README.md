@@ -33,4 +33,4 @@ Plot the F1 scores for each layer on:
 * Named Entity Recognition(NER) (using CONLL)
 * Relation Extraction(REL) (using SemEval)
 
-![] (https://github.com/patodiayogesh/Natural-Language-Processing/blob/main/SVD%2C%20Word2Vec%20and%20BERT%20word%20embeddings/3_explore_bert/plot.png)
+![](https://github.com/patodiayogesh/Natural-Language-Processing/blob/main/SVD%2C%20Word2Vec%20and%20BERT%20word%20embeddings/3_explore_bert/plot.png)
